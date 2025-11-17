@@ -93,7 +93,6 @@ print(f"The Variance of arrival from feeder is {var:.3f}")
 print(f"The Standard deviation of arrival from feeder is {SD:.3f}")
 
 
-
 ```
 # Google_Colab-link: 
 https://colab.research.google.com/drive/1XHA9fpfKu1iotQaFTkahiDGSxAHf5DWD?usp=sharing
