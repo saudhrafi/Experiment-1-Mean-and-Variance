@@ -45,17 +45,64 @@ It is calculated as:
 13. Stop.
 
 
+# Name: Mohamed saudh R
+# Reg_No: 25011649
+# Slot_Name: 3P1-1
+# Date: 17-11-2025
+
+
 # Program: 
+```
+# Exp: No-1
+import numpy as np
+
+# Input: Enter the number of arrivals separated by space
+L = [int(i) for i in input("Enter arrival data: ").split()]
+N = len(L)
+M = max(L)
+
+x = []
+f = []
+
+# Counting frequency of each arrival
+for i in range(M + 1):
+    c = 0
+    for j in range(N):
+        if L[j] == i:
+            c += 1
+    f.append(c)
+    x.append(i)   
+
+sf = np.sum(f)
+
+# Calculating probability for each occurrence
+p = [f[i] / sf for i in range(M + 1)]
+
+# Mean of arrival (expected value)
+mean = np.inner(x, p)
+
+# Second moment (E[X²])
+EX2 = np.inner(np.square(x), p)
+
+# Variance and standard deviation
+var = EX2 - mean**2
+SD = np.sqrt(var)
+
+print(f"The Mean arrival rate is {mean:.3f}")
+print(f"The Variance of arrival from feeder is {var:.3f}")
+print(f"The Standard deviation of arrival from feeder is {SD:.3f}")
 
 
 
-
-
+```
+# Google_Colab-link: 
+https://colab.research.google.com/drive/1XHA9fpfKu1iotQaFTkahiDGSxAHf5DWD?usp=sharing
 
 
 
 # Output:
 
+<img width="659" height="123" alt="image" src="https://github.com/user-attachments/assets/eb616376-e73a-47cd-95c5-37ab4601ffd5" />
 
 
 # Result: 
